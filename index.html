@@ -13,14 +13,14 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: #f8fafc; overflow-x: hidden; }
+        body { font-family: 'Inter', sans-serif; background: #1a1a2e; overflow-x: hidden; color: #e2e8f0; } /* Darker body background and default text */
         
         /* Smooth Scroll */
         html { scroll-behavior: smooth; }
 
         /* Hero Gradient Animation */
         .hero-section {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            background: linear-gradient(135deg, #0d121c 0%, #151a23 50%, #1f2732 100%); /* Even darker gradient */
             position: relative;
             overflow: hidden;
             min-height: 100vh;
@@ -31,32 +31,34 @@
             inset: 0;
             background-image: radial-gradient(#3b82f6 1px, transparent 1px);
             background-size: 40px 40px;
-            opacity: 0.1;
+            opacity: 0.08; /* Slightly less opaque */
         }
 
         /* Glassmorphism */
         .glass-nav {
-            backdrop-filter: blur(12px);
-            background: rgba(15, 23, 42, 0.8);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px); /* Increased blur */
+            background: rgba(13, 18, 28, 0.85); /* Darker, slightly less transparent */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08); /* Darker border */
         }
 
         .glass-card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
+            background: rgba(30, 41, 59, 0.8); /* Darker glass card */
+            backdrop-filter: blur(12px); /* Increased blur */
+            border: 1px solid rgba(255, 255, 255, 0.2); /* Darker border */
         }
 
         /* Product Card Hover Effects */
         .product-card {
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid #e2e8f0;
+            border: 1px solid #2d3748; /* Darker border */
+            background: #252f3f; /* Darker card background */
+            color: #e2e8f0;
         }
         
         .product-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.1);
-            border-color: #3b82f6;
+            box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+            border-color: #60a5fa; /* Blue accent */
         }
 
         .product-card img { transition: transform 0.7s ease; }
@@ -213,7 +215,7 @@
                             ar-modes="webxr scene-viewer quick-look" 
                             camera-controls 
                             auto-rotate
-                            shadow-intensity="1.5"  shadow-softness="0.5"   exposure="1"           environment-image="neutral" loading="eager">
+                            shadow-intensity="2.5" shadow-softness="0.7" exposure="0.8" environment-image="https://modelviewer.dev/assets/environments/spruit_sunrise_1k_HDR.hdr" skybox-image="https://modelviewer.dev/assets/environments/spruit_sunrise_1k_HDR.hdr" loading="eager">
                             
                             <div slot="poster" class="flex flex-col items-center justify-center h-full text-gray-400">
                                 <i class="fas fa-cube text-4xl mb-4 animate-bounce"></i>
@@ -236,104 +238,102 @@
         </div>
     </section>
 
-    <section id="products" class="section-padding bg-white">
-        <div class="container mx-auto px-6">
+    <section id="products" class="section-padding bg-gray-900"> <div class="container mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-sm font-bold text-blue-600 tracking-widest uppercase mb-3">Our Solutions</h2>
-                <h3 class="text-4xl font-bold text-gray-900 mb-4">Engineered for Textile Efficiency</h3>
-                <p class="text-gray-600 text-lg">From spinning to finishing, our rotomoulded products ensure zero damage to your delicate yarns and fabrics.</p>
+                <h2 class="text-sm font-bold text-blue-400 tracking-widest uppercase mb-3">Our Solutions</h2>
+                <h3 class="text-4xl font-bold text-white mb-4">Engineered for Textile Efficiency</h3>
+                <p class="text-gray-400 text-lg">From spinning to finishing, our rotomoulded products ensure zero damage to your delicate yarns and fabrics.</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <div class="product-card bg-white rounded-2xl overflow-hidden group">
-                    <div class="h-64 bg-gray-100 overflow-hidden relative">
-                        <img src="https://kaveriplasto.com/wp-content/uploads/2024/12/processing-trolleys-5.jpg" alt="Textile Processing Trolley" class="w-full h-full object-cover">
+                <div class="product-card rounded-2xl overflow-hidden group">
+                    <div class="h-64 bg-gray-800 overflow-hidden relative"> <img src="https://kaveriplasto.com/wp-content/uploads/2024/12/processing-trolleys-5.jpg" alt="Textile Processing Trolley" class="w-full h-full object-cover">
                         <div class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">BESTSELLER</div>
                     </div>
                     <div class="p-8">
-                        <h4 class="text-xl font-bold text-gray-900 mb-2">Processing Trolleys</h4>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Seamless construction specifically for wet processing. Chemical resistant and snag-free to prevent fabric damage.</p>
-                        <ul class="text-sm text-gray-500 space-y-2 mb-6">
+                        <h4 class="text-xl font-bold text-white mb-2">Processing Trolleys</h4>
+                        <p class="text-gray-400 text-sm mb-4 line-clamp-2">Seamless construction specifically for wet processing. Chemical resistant and snag-free to prevent fabric damage.</p>
+                        <ul class="text-sm text-gray-400 space-y-2 mb-6">
                             <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Acid & Alkali Resistant</li>
                             <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Heavy Duty Castors</li>
                         </ul>
-                        <a href="#contact" class="inline-flex items-center text-blue-600 font-semibold group-hover:translate-x-2 transition">Request Specs <i class="fas fa-arrow-right ml-2"></i></a>
+                        <a href="#contact" class="inline-flex items-center text-blue-400 font-semibold group-hover:translate-x-2 transition">Request Specs <i class="fas fa-arrow-right ml-2"></i></a>
                     </div>
                 </div>
 
-                <div class="product-card bg-white rounded-2xl overflow-hidden group">
-                    <div class="h-64 bg-gray-100 overflow-hidden">
+                <div class="product-card rounded-2xl overflow-hidden group">
+                    <div class="h-64 bg-gray-800 overflow-hidden">
                         <img src="https://kaveriplasto.com/wp-content/uploads/2024/12/Doffing-Crates-2.jpg" alt="Card Cans and Doffing" class="w-full h-full object-cover">
                     </div>
                     <div class="p-8">
-                        <h4 class="text-xl font-bold text-gray-900 mb-2">Card Cans & Springs</h4>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">High-precision card cans for spinning. Ensures smooth sliver handling with perfectly calibrated springs.</p>
-                        <ul class="text-sm text-gray-500 space-y-2 mb-6">
+                        <h4 class="text-xl font-bold text-white mb-2">Card Cans & Springs</h4>
+                        <p class="text-gray-400 text-sm mb-4 line-clamp-2">High-precision card cans for spinning. Ensures smooth sliver handling with perfectly calibrated springs.</p>
+                        <ul class="text-sm text-gray-400 space-y-2 mb-6">
                             <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Anti-static Properties</li>
                             <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Customized Heights</li>
                         </ul>
-                        <a href="#contact" class="inline-flex items-center text-blue-600 font-semibold group-hover:translate-x-2 transition">Request Specs <i class="fas fa-arrow-right ml-2"></i></a>
+                        <a href="#contact" class="inline-flex items-center text-blue-400 font-semibold group-hover:translate-x-2 transition">Request Specs <i class="fas fa-arrow-right ml-2"></i></a>
                     </div>
                 </div>
 
-                <div class="product-card bg-white rounded-2xl overflow-hidden group">
-                    <div class="h-64 bg-gray-100 overflow-hidden">
+                <div class="product-card rounded-2xl overflow-hidden group">
+                    <div class="h-64 bg-gray-800 overflow-hidden">
                         <img src="https://kaveriplasto.com/wp-content/uploads/2024/12/Pallet-Crates-4.jpg" alt="Doffing Baskets" class="w-full h-full object-cover">
                     </div>
                     <div class="p-8">
-                        <h4 class="text-xl font-bold text-gray-900 mb-2">Doffing Baskets</h4>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Lightweight yet robust baskets for collecting yarn bobbins. Ribbed design for extra strength.</p>
-                        <ul class="text-sm text-gray-500 space-y-2 mb-6">
+                        <h4 class="text-xl font-bold text-white mb-2">Doffing Baskets</h4>
+                        <p class="text-gray-400 text-sm mb-4 line-clamp-2">Lightweight yet robust baskets for collecting yarn bobbins. Ribbed design for extra strength.</p>
+                        <ul class="text-sm text-gray-400 space-y-2 mb-6">
                             <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Stackable Design</li>
                             <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> High Impact Strength</li>
                         </ul>
-                        <a href="#contact" class="inline-flex items-center text-blue-600 font-semibold group-hover:translate-x-2 transition">Request Specs <i class="fas fa-arrow-right ml-2"></i></a>
+                        <a href="#contact" class="inline-flex items-center text-blue-400 font-semibold group-hover:translate-x-2 transition">Request Specs <i class="fas fa-arrow-right ml-2"></i></a>
                     </div>
                 </div>
 
-                <div class="product-card bg-white rounded-2xl overflow-hidden group">
-                    <div class="h-64 bg-gray-100 overflow-hidden">
+                <div class="product-card rounded-2xl overflow-hidden group">
+                    <div class="h-64 bg-gray-800 overflow-hidden">
                         <img src="https://kaveriplasto.com/wp-content/uploads/2025/03/Kaveri-Material-Handling-Pallets.jpg" alt="Industrial Pallets" class="w-full h-full object-cover">
                     </div>
                     <div class="p-8">
-                        <h4 class="text-xl font-bold text-gray-900 mb-2">Hygenic Pallets</h4>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Splinter-free plastic pallets ideal for fabric storage. Resistant to moisture, termites, and fungus.</p>
-                        <ul class="text-sm text-gray-500 space-y-2 mb-6">
+                        <h4 class="text-xl font-bold text-white mb-2">Hygenic Pallets</h4>
+                        <p class="text-gray-400 text-sm mb-4 line-clamp-2">Splinter-free plastic pallets ideal for fabric storage. Resistant to moisture, termites, and fungus.</p>
+                        <ul class="text-sm text-gray-400 space-y-2 mb-6">
                             <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 4-Way Entry</li>
                             <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Rackable Options</li>
                         </ul>
-                        <a href="#contact" class="inline-flex items-center text-blue-600 font-semibold group-hover:translate-x-2 transition">Request Specs <i class="fas fa-arrow-right ml-2"></i></a>
+                        <a href="#contact" class="inline-flex items-center text-blue-400 font-semibold group-hover:translate-x-2 transition">Request Specs <i class="fas fa-arrow-right ml-2"></i></a>
                     </div>
                 </div>
 
-                <div class="product-card bg-white rounded-2xl overflow-hidden group">
-                    <div class="h-64 bg-gray-100 overflow-hidden">
+                <div class="product-card rounded-2xl overflow-hidden group">
+                    <div class="h-64 bg-gray-800 overflow-hidden">
                         <img src="https://kaveriplasto.com/wp-content/uploads/2024/12/Containers-1.jpg" alt="Chemical Tanks" class="w-full h-full object-cover">
                     </div>
                     <div class="p-8">
-                        <h4 class="text-xl font-bold text-gray-900 mb-2">Chemical Tanks</h4>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Heavy duty storage for dyes and chemicals. One-piece molded construction prevents leakage.</p>
-                        <ul class="text-sm text-gray-500 space-y-2 mb-6">
+                        <h4 class="text-xl font-bold text-white mb-2">Chemical Tanks</h4>
+                        <p class="text-gray-400 text-sm mb-4 line-clamp-2">Heavy duty storage for dyes and chemicals. One-piece molded construction prevents leakage.</p>
+                        <ul class="text-sm text-gray-400 space-y-2 mb-6">
                             <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> UV Stabilized</li>
                             <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Corrosion Free</li>
                         </ul>
-                        <a href="#contact" class="inline-flex items-center text-blue-600 font-semibold group-hover:translate-x-2 transition">Request Specs <i class="fas fa-arrow-right ml-2"></i></a>
+                        <a href="#contact" class="inline-flex items-center text-blue-400 font-semibold group-hover:translate-x-2 transition">Request Specs <i class="fas fa-arrow-right ml-2"></i></a>
                     </div>
                 </div>
 
-                <div class="product-card bg-white rounded-2xl overflow-hidden group">
-                    <div class="h-64 bg-gray-100 overflow-hidden">
+                <div class="product-card rounded-2xl overflow-hidden group">
+                    <div class="h-64 bg-gray-800 overflow-hidden">
                         <img src="https://kaveriplasto.com/wp-content/uploads/2025/03/Crates-with-Wheel.jpg" alt="Mobile Crates" class="w-full h-full object-cover">
                     </div>
                     <div class="p-8">
-                        <h4 class="text-xl font-bold text-gray-900 mb-2">Mobile Crates</h4>
-                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">Easy maneuverability for shop floor logistics. Reduces manual labor and speeds up material movement.</p>
-                        <ul class="text-sm text-gray-500 space-y-2 mb-6">
+                        <h4 class="text-xl font-bold text-white mb-2">Mobile Crates</h4>
+                        <p class="text-gray-400 text-sm mb-4 line-clamp-2">Easy maneuverability for shop floor logistics. Reduces manual labor and speeds up material movement.</p>
+                        <ul class="text-sm text-gray-400 space-y-2 mb-6">
                             <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Ergonomic Design</li>
                             <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Smooth Running Wheels</li>
                         </ul>
-                        <a href="#contact" class="inline-flex items-center text-blue-600 font-semibold group-hover:translate-x-2 transition">Request Specs <i class="fas fa-arrow-right ml-2"></i></a>
+                        <a href="#contact" class="inline-flex items-center text-blue-400 font-semibold group-hover:translate-x-2 transition">Request Specs <i class="fas fa-arrow-right ml-2"></i></a>
                     </div>
                 </div>
 
@@ -341,54 +341,52 @@
         </div>
     </section>
 
-    <section id="features" class="section-padding bg-gray-50">
-        <div class="container mx-auto px-6">
+    <section id="features" class="section-padding bg-gray-800"> <div class="container mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Why Textile Mills Choose Kaveri Plasto</h2>
-                    <p class="text-gray-600 mb-8 text-lg">In the textile industry, a single snag can ruin a batch of fabric. Our Rotomoulding process ensures perfectly smooth, seamless interiors.</p>
+                    <h2 class="text-3xl font-bold text-white mb-6">Why Textile Mills Choose Kaveri Plasto</h2>
+                    <p class="text-gray-400 mb-8 text-lg">In the textile industry, a single snag can ruin a batch of fabric. Our Rotomoulding process ensures perfectly smooth, seamless interiors.</p>
                     
                     <div class="space-y-6">
                         <div class="flex gap-4">
-                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 text-blue-600 text-xl">
+                            <div class="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center flex-shrink-0 text-blue-400 text-xl">
                                 <i class="fas fa-shield-alt"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-gray-900">Snag-Free Surface</h4>
-                                <p class="text-sm text-gray-600 mt-1">Completely seamless interiors prevent yarn breakage and fabric damage.</p>
+                                <h4 class="font-bold text-white">Snag-Free Surface</h4>
+                                <p class="text-sm text-gray-400 mt-1">Completely seamless interiors prevent yarn breakage and fabric damage.</p>
                             </div>
                         </div>
                         
                         <div class="flex gap-4">
-                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 text-green-600 text-xl">
+                            <div class="w-12 h-12 bg-green-900 rounded-full flex items-center justify-center flex-shrink-0 text-green-400 text-xl">
                                 <i class="fas fa-leaf"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-gray-900">Food Grade Virgin LLDPE</h4>
-                                <p class="text-sm text-gray-600 mt-1">We use only 100% virgin material. Non-toxic, odorless, and chemical resistant.</p>
+                                <h4 class="font-bold text-white">Food Grade Virgin LLDPE</h4>
+                                <p class="text-sm text-gray-400 mt-1">We use only 100% virgin material. Non-toxic, odorless, and chemical resistant.</p>
                             </div>
                         </div>
 
                         <div class="flex gap-4">
-                            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 text-purple-600 text-xl">
+                            <div class="w-12 h-12 bg-purple-900 rounded-full flex items-center justify-center flex-shrink-0 text-purple-400 text-xl">
                                 <i class="fas fa-sun"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-gray-900">UV Stabilized</h4>
-                                <p class="text-sm text-gray-600 mt-1">Products do not degrade or become brittle under sunlight or harsh lighting.</p>
+                                <h4 class="font-bold text-white">UV Stabilized</h4>
+                                <p class="text-sm text-gray-400 mt-1">Products do not degrade or become brittle under sunlight or harsh lighting.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-100">
-                    <img src="https://images.unsplash.com/photo-1536403902001-39a19b142683?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Textile Factory Production" class="rounded-2xl w-full object-cover h-80 mb-6">
+                <div class="bg-gray-900 p-8 rounded-3xl shadow-xl border border-gray-700"> <img src="https://images.unsplash.com/photo-1536403902001-39a19b142683?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Textile Factory Production" class="rounded-2xl w-full object-cover h-80 mb-6">
                     <div class="flex items-center justify-between">
                         <div>
-                            <p class="font-bold text-gray-900 text-xl">Trusted by Industry Leaders</p>
+                            <p class="font-bold text-white text-xl">Trusted by Industry Leaders</p>
                             <p class="text-sm text-gray-500">Deploying 500+ units monthly</p>
                         </div>
-                        <a href="#contact" class="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center text-white hover:bg-blue-600 transition">
+                        <a href="#contact" class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center text-white hover:bg-blue-600 transition">
                             <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -397,32 +395,31 @@
         </div>
     </section>
 
-    <section id="contact" class="section-padding bg-blue-900 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+    <section id="contact" class="section-padding bg-blue-950 relative overflow-hidden"> <div class="absolute inset-0 opacity-15 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
         
         <div class="container mx-auto px-6 relative z-10">
             <div class="glass-card rounded-3xl p-8 lg:p-12 max-w-4xl mx-auto">
                 <div class="text-center mb-10">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Get a Custom Quote</h2>
-                    <p class="text-gray-600">Need specific dimensions or colors for your mill? We customize solutions.</p>
+                    <h2 class="text-3xl font-bold text-white mb-4">Get a Custom Quote</h2>
+                    <p class="text-gray-400">Need specific dimensions or colors for your mill? We customize solutions.</p>
                 </div>
 
                 <form class="space-y-6">
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-2">Name</label>
-                            <input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                            <label class="block text-sm font-semibold text-gray-300 mb-2">Name</label>
+                            <input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition text-white">
                         </div>
                         <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-2">Company</label>
-                            <input type="text" placeholder="Mill / Company Name" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                            <label class="block text-sm font-semibold text-gray-300 mb-2">Company</label>
+                            <input type="text" placeholder="Mill / Company Name" class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition text-white">
                         </div>
                     </div>
                     
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-2">Product Interest</label>
-                            <select class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                            <label class="block text-sm font-semibold text-gray-300 mb-2">Product Interest</label>
+                            <select class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition text-white">
                                 <option>Processing Trolleys</option>
                                 <option>Card Cans</option>
                                 <option>Doffing Baskets</option>
@@ -432,14 +429,14 @@
                             </select>
                         </div>
                         <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-2">Phone</label>
-                            <input type="tel" placeholder="+91 98765 43210" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                            <label class="block text-sm font-semibold text-gray-300 mb-2">Phone</label>
+                            <input type="tel" placeholder="+91 98765 43210" class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition text-white">
                         </div>
                     </div>
 
                     <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-2">Message</label>
-                        <textarea rows="4" placeholder="Describe your requirement..." class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition"></textarea>
+                        <label class="block text-sm font-semibold text-gray-300 mb-2">Message</label>
+                        <textarea rows="4" placeholder="Describe your requirement..." class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition text-white"></textarea>
                     </div>
 
                     <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl transition shadow-lg shadow-blue-600/30 transform hover:-translate-y-1">
@@ -450,8 +447,7 @@
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
-        <div class="container mx-auto px-6">
+    <footer class="bg-gray-950 text-gray-400 py-12 border-t border-gray-800"> <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="flex items-center gap-3">
                     <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center text-white font-bold">K</div>
@@ -467,7 +463,7 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/919876543210" class="fixed bottom-6 right-6 w-16 h-16 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-2xl transition z-50 animate-bounce">
+    <a href="https://wa.me/919876543210" class="fixed bottom-6 right-6 w-16 h-16 bg-green-600 hover:bg-green-700 text-white rounded-full flex items-center justify-center shadow-2xl transition z-50 animate-bounce">
         <i class="fab fa-whatsapp text-3xl"></i>
     </a>
 
@@ -485,11 +481,3 @@
         });
 
         // Form Submission Alert
-        document.querySelector('form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for your interest in Kaveri Plasto Textile Solutions. Our sales team will contact you shortly.');
-        });
-    </script>
-</body>
-</html>
-```http://googleusercontent.com/image_generation_content/0
